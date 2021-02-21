@@ -11,17 +11,15 @@ def isbn(livros):
     
     inv = []
     for livro in livros:
-        sum1 = sum3 = 0
+        sum = 0
         for idx, num in enumerate(livros[livro]):
             
             if idx == 0 or idx % 2 == 0:
-                sum1 = sum1 + int(num)*1
-                sum3 = sum3 + int(num)*3
+                sum += int(num)*1
             else:
-                sum1+= int(num)*3
-                sum3 += int(num)*1
+                sum += int(num)*3
                 
-        if sum1 % 10 != 0 and sum3 % 10 != 0 :
+        if sum % 10 != 0 :
             inv.append(livro)
         
     return inv
