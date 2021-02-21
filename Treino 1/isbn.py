@@ -21,5 +21,5 @@ def isbn(livros):
                 
         if sum % 10 != 0 :
             inv.append(livro)
-        
+    inv.sort()
     return inv
