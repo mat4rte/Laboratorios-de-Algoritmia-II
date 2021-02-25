@@ -11,15 +11,11 @@ def isbn(livros):
     
     inv = []
     for livro in livros:
-        sum = 0
-        for idx, num in enumerate(livros[livro]):
-            
-            if idx == 0 or idx % 2 == 0:
-                sum += int(num)*1
-            else:
-                sum += int(num)*3
-                
-        if sum % 10 != 0 :
+        liv = livros
+        soma = sum(list(map(lambda x:int(x), livros[livro][0::2])))
+        soma += sum(list(map(lambda x:int(x)*3, livros[livro][1::2])))
+        if soma % 10 != 0:
             inv.append(livro)
+            
     inv.sort()
     return inv
