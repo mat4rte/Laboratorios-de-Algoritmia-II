@@ -26,3 +26,16 @@ def aloca(prefs):
     
     
     return n_alocados
+-----------------------------
+def aloca(prefs):
+    alunos = sorted(prefs)
+    candidatos = prefs.copy()
+    escolhidos = []
+    for i in alunos:
+        for j in candidatos[i]:
+            if j not in escolhidos:
+                escolhidos.append(j)
+                del candidatos[i]
+                break
+    result = sorted(candidatos)
+    return result
