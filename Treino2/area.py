@@ -38,13 +38,11 @@ def areaAux(p, mapa, visitados):
         if p not in visitados:
             visitados.append(p)
         p = (x,y + 1)
-        #visitados.append(p)
         areaAux(p, mapa, visitados)
     if y - 1 >= 0 and mapa[x][y - 1] == '.' and (x, y - 1) not in visitados:     #esq
         if p not in visitados:
             visitados.append(p)
         p = (x,y - 1)
-        #visitados.append(p)
         areaAux(p, mapa, visitados)
     elif p not in visitados:
         visitados.append(p)
