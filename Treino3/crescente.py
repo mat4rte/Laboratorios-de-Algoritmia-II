@@ -10,7 +10,7 @@ da sequência, sendo o resultado pretendido o máximo obtido aplicando esta
 função a todos os sufixos da sequência de entrada.
 
 """
-
+#9%
 def maior_subCres(num, lista):
     if not lista:
         return 0
